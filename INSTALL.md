@@ -83,7 +83,3 @@ const cors = require("cors");
 app.use(cors());
 בהצלחה!
 מפתחת: אילה פלמנבוים 🌸
-
-go
-Copy
-Edit
