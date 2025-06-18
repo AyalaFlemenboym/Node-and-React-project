@@ -25,61 +25,80 @@
 cd client
 npm install
 npm start
-לאחר ההרצה, האפליקציה תעלה בברירת מחדל בכתובת:
+```
+לאחר ההרצה, האפליקציה תעלה בברירת מחדל בכתובת:  
 http://localhost:3000
 
-⚙️ 2. הרצת הסרבר (Node.js API)
-bash
-Copy
-Edit
+---
+
+### ⚙️ 2. הרצת הסרבר (Node.js API)
+
+```bash
 cd server
 npm install
 npm start
-ה־API ירוץ בד"כ על:
+```
+ה־API ירוץ בד"כ על:  
 http://localhost:5000
 
-⚠️ שימו לב
-קוד המקור אינו כולל קובץ ייצוא של מסד הנתונים.
+---
+
+### ⚠️ שימו לב
+
+קוד המקור אינו כולל קובץ ייצוא של מסד הנתונים.  
 המערכת משתמשת ב־MongoDB דרך Mongoose, וה־Schemas (מבני הנתונים) מוגדרים בקוד.
 
 בעת הפעלת השרת לראשונה, הקולקשנים יווצרו אוטומטית ברגע שמבצעים פעולות כמו הרשמה, הוספת מוצר וכדומה.
 
-⚙️ במידה ותרצו לעיין במבני הנתונים, ראו את קבצי המודלים בתיקייה:
-server/models
+---
 
-🪄 אם ברצונכם לייבא נתוני התחלה (Seed), ניתן:
+### 🗂 עיון במבני הנתונים
 
-ליצור קובץ JSON לפי המודל
+קבצי המודלים נמצאים בתיקייה:  
+`server/models`
 
-או להשתמש בקובץ seed.js (אם קיים)
+---
 
-📄 קובץ הגדרות .env
-יש ליצור קובץ בשם .env בתיקיית server/ עם התוכן הבא:
+### 🪄 ייבוא נתוני התחלה (Seed)
 
-env
-Copy
-Edit
+ניתן:
+- ליצור קובץ JSON לפי המודל
+- או להשתמש בקובץ `seed.js` (אם קיים)
+
+---
+
+### 📄 קובץ הגדרות `.env`
+
+יש ליצור קובץ בשם `.env` בתיקיית `server/` עם התוכן הבא:
+
+```env
 MONGO_URI=mongodb://localhost:27017/stoneShop
 PORT=5000
+```
 ודאו שה־MongoDB פעיל ושניתן להתחבר אליו.
 
-🧪 בדיקות
-ודאי שהפרונטאנד מצליח לתקשר עם ה־API (ניתן לבדוק דרך Network ב־DevTools).
+---
+
+### 🧪 בדיקות
+
+ודאי שהפרונטאנד מצליח לתקשר עם ה־API (ניתן לבדוק דרך Network ב־DevTools).  
 בפרויקט קיימים רכיבים בסיסיים לבדיקה ידנית של הפעולות:
 
-הרשמה והתחברות
+- הרשמה והתחברות  
+- ניהול מוצרים (למנהלים)  
+- הוספה לסל קניות  
 
-ניהול מוצרים (למנהלים)
+---
 
-הוספה לסל קניות
+### 🛠 טיפול בשגיאות CORS
 
-🛠 טיפול בשגיאות CORS
-אם מתקבלת שגיאת CORS, יש להוסיף הגדרות מתאימות בקובץ server.js, לדוגמה:
+אם מתקבלת שגיאת CORS, הוסיפו לקובץ `server.js` את ההגדרות הבאות:
 
-javascript
-Copy
-Edit
+```javascript
 const cors = require("cors");
 app.use(cors());
-בהצלחה!
-מפתחת: אילה פלמנבוים 🌸
+```
+
+---
+
+בהצלחה!🌸
