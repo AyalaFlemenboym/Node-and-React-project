@@ -20,6 +20,7 @@
 ## 🛠 הוראות התקנה והרצה
 
 ### 📂 1. התקנת הקליינט (React)
+
 ```bash
 cd client
 npm install
@@ -35,7 +36,6 @@ cd server
 npm install
 npm start
 ה־API ירוץ בד"כ על:
-
 http://localhost:5000
 
 ⚠️ שימו לב
